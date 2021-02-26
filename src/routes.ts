@@ -8,6 +8,6 @@ const userController = new UserController()
 const surveysController = new SurveysController()
 
 router.post('/user', userController.create)
-router.post('surveys', surveysController.create)
+router.post('/surveys', surveysController.create)
 
 export {router}
