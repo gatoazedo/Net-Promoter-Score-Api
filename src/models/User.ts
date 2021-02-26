@@ -1,5 +1,9 @@
 import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm";
 import {v4 as uuid} from 'uuid'
+/*
+- v4 = tipo de uuid.
+- as uuid = renomeia o v4 para uuid.
+*/
 
 @Entity('users')
 class User {
