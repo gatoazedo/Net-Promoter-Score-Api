@@ -12,7 +12,7 @@ describe('Surveys', () => {
   it('Should be able to create a new survey.', async () => {
     const response = await request(app).post('/surveys').send({
       title: 'Title example 01',
-      description: 'Description example description 01'
+      description: 'Description example 01'
     })
 
     expect(response.status).toBe(201)
@@ -22,7 +22,7 @@ describe('Surveys', () => {
   it('Should be able to get all survey.', async () => {
     await request(app).post('/surveys').send({
       title: 'Title example 02',
-      description: 'Description example description 02'
+      description: 'Description example 02'
     })
 
     const response = await request(app).get('/surveys')
