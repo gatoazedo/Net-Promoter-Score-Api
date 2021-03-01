@@ -11,10 +11,22 @@ describe('Surveys', () => {
 
   it('Should be able to create a new survey.', async () => {
     const response = await request(app).post('/surveys').send({
-      title: 'Queremos ouvir sua opnião.',
-      description: 'De 0 a 10, qual nota voçê daria para nossos serviços?'
+      title: 'Title example 01',
+      description: 'Description example description 01'
     })
 
     expect(response.status).toBe(201)
+    expect(response.body).toHaveProperty('id')
+  })
+
+  it('Should be able to get all survey.', async () => {
+    await request(app).post('/surveys').send({
+      title: 'Title example 01',
+      description: 'Description example description 01'
+    })
+
+    const response = await request(app).get('/surveys')
+
+    expect(response.body.length).toBe(2)
   })
 })
