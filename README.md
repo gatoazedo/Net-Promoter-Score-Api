@@ -1,2 +1,9 @@
 # Net-Promoter-Score-Api
-Api desenvolvida durante o evento NLW#4 da Rocketseat.
+
+Comandos para usar a api:
+
+- Instalando as dependências: npm install
+
+- Executando a api: yarn dev
+
+- Executando os testes automatizados: yarn test
