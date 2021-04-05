@@ -11,8 +11,8 @@ describe('Surveys', () => {
 
   it('Should be able to create a new survey.', async () => {
     const response = await request(app).post('/surveys').send({
-      title: 'Title example: 01',
-      description: 'Description example: 01'
+      title: 'Title example 1',
+      description: 'Description example 1'
     })
 
     expect(response.status).toBe(201)
@@ -21,8 +21,8 @@ describe('Surveys', () => {
 
   it('Should be able to get all survey.', async () => {
     await request(app).post('/surveys').send({
-      title: 'Title example: 02',
-      description: 'Description example: 02'
+      title: 'Title example 2',
+      description: 'Description example 2'
     })
 
     const response = await request(app).get('/surveys')
